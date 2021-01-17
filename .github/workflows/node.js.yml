@@ -41,5 +41,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          ls -lah
+          cd ~/apps/calculate-bwa
+          git pull origin master
+          npm install
+          pm2 restart all
 
