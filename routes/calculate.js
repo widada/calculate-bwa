@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
   } = req.query;
   
   const result = calculateHandler.calculate(operator, number1, number2);
-  res.json({ hasil: result });
+  res.json({ result });
 });
 
 module.exports = router;
